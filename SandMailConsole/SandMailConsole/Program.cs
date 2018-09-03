@@ -15,7 +15,7 @@ namespace SandMailConsole
         {
 
             //формируем письмо 
-            MailMessage mm = new MailMessage("joess63t@yandex.ru", "ufrc@yandex.ru");
+            MailMessage mm = new MailMessage("адрес отправителя", "адрес получателя");
             mm.Subject = "Заголовок письма";
             mm.Body = "Тело письма";
             mm.IsBodyHtml = false;                                  // не использовать html  в теле письма
@@ -26,7 +26,7 @@ namespace SandMailConsole
             sc.EnableSsl = true;
             sc.DeliveryMethod = SmtpDeliveryMethod.Network;
             sc.UseDefaultCredentials = false;
-            sc.Credentials = new NetworkCredential("joess63t@yandex.ru", "Alhimik163");
+            sc.Credentials = new NetworkCredential("логин отправителя", "пароль");
 
 
             try
